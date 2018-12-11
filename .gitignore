@@ -1,0 +1,7 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/Minecraft-Clone/.vs/Minecraft-Clone/v15
+/Minecraft-Clone/Minecraft-Clone/Debug/Minecraft-Clone.tlog
+/Minecraft-Clone/Minecraft-Clone/Debug/Minecraft-Clone.log
