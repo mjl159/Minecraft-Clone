@@ -13,25 +13,61 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\ToBeRemoved">
+      <UniqueIdentifier>{c4da4c5f-a6df-490c-9fb9-f63493040983}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Included">
+      <UniqueIdentifier>{c8278244-0d7b-40c6-89eb-eaf8ffa40bed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ToBeRemoved">
+      <UniqueIdentifier>{022ee358-00aa-4153-9f47-f44fea891a05}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Graphics">
+      <UniqueIdentifier>{b9f1aaa7-c9e6-478a-b4d7-07cbdc45c28a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Graphics">
+      <UniqueIdentifier>{c01ce8ac-8da4-4ee0-ad4e-80351445e2e6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Classes\initShader.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Classes\project2.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Headers\initShader.h">
+    <ClInclude Include="headers\main.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\graphics.h">
+      <Filter>Header Files\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\shader.h">
+      <Filter>Header Files\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="headers\initShader.h">
+      <Filter>Header Files\ToBeRemoved</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Shaders\fshader.glsl">
+    <ClCompile Include="src\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\glad.c">
+      <Filter>Source Files\Included</Filter>
+    </ClCompile>
+    <ClCompile Include="src\project2.c">
+      <Filter>Source Files\ToBeRemoved</Filter>
+    </ClCompile>
+    <ClCompile Include="src\initShader.c">
+      <Filter>Source Files\ToBeRemoved</Filter>
+    </ClCompile>
+    <ClCompile Include="src\graphics.cpp">
+      <Filter>Source Files\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="src\shader.cpp">
+      <Filter>Source Files\Graphics</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="shaders\fshader.frag">
       <Filter>Resource Files</Filter>
     </None>
-    <None Include="Shaders\vshader.glsl">
+    <None Include="shaders\vshader.vs">
       <Filter>Resource Files</Filter>
     </None>
   </ItemGroup>

@@ -18,6 +18,24 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="headers\graphics.h" />
+    <ClInclude Include="headers\initShader.h" />
+    <ClInclude Include="headers\main.h" />
+    <ClInclude Include="headers\shader.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\glad.c" />
+    <ClCompile Include="src\graphics.cpp" />
+    <ClCompile Include="src\initShader.c" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\project2.c" />
+    <ClCompile Include="src\shader.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="shaders\fshader.frag" />
+    <None Include="shaders\vshader.vs" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
     <ProjectGuid>{0BC72C88-33EB-44B3-91D3-E07433A0BEC8}</ProjectGuid>
@@ -70,8 +88,8 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>Libraries\includes;$(IncludePath)</IncludePath>
-    <LibraryPath>Libraries\libs;$(LibraryPath)</LibraryPath>
+    <IncludePath>dev_libs\includes;$(IncludePath)</IncludePath>
+    <LibraryPath>dev_libs\libs;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -79,11 +97,12 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>Libraries\includes</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>dev_libs\includes</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <AdditionalLibraryDirectories>Libraries\libs</AdditionalLibraryDirectories>
-      <AdditionalDependencies>freeglut.lib;glew32d.lib;glew32s.lib;glfw3.lib;glfw3dll.lib;GlU32.Lib;OpenGL32.Lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>dev_libs\libs</AdditionalLibraryDirectories>
+      <AdditionalDependencies>glfw3.lib;glfw3dll.lib;GlU32.Lib;OpenGL32.Lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Console</SubSystem>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -122,17 +141,6 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="Classes\initShader.c" />
-    <ClCompile Include="Classes\project2.c" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Headers\initShader.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Shaders\fshader.glsl" />
-    <None Include="Shaders\vshader.glsl" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
