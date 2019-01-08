@@ -19,22 +19,30 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="headers\globals.h" />
     <ClInclude Include="headers\graphics.h" />
-    <ClInclude Include="headers\initShader.h" />
+    <ClInclude Include="headers\graphicsObject.h" />
+    <ClInclude Include="headers\helper.h" />
     <ClInclude Include="headers\main.h" />
     <ClInclude Include="headers\shader.h" />
+    <ClInclude Include="headers\objectTexture.h" />
+    <ClInclude Include="headers\texture.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\glad.c" />
     <ClCompile Include="src\graphics.cpp" />
-    <ClCompile Include="src\initShader.c" />
+    <ClCompile Include="src\graphicsObject.cpp" />
+    <ClCompile Include="src\helper.cpp" />
     <ClCompile Include="src\main.cpp" />
-    <ClCompile Include="src\project2.c" />
     <ClCompile Include="src\shader.cpp" />
+    <ClCompile Include="src\objectTexture.cpp" />
+    <ClCompile Include="src\texture.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="shaders\fshader.frag" />
-    <None Include="shaders\vshader.vs" />
+    <None Include="shaders\simple_color_shader.frag" />
+    <None Include="shaders\simple_color_shader.vs" />
+    <None Include="shaders\simple_texture_shader.frag" />
+    <None Include="shaders\simple_texture_shader.vs" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
@@ -98,6 +106,7 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>dev_libs\includes</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_MBCS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>dev_libs\libs</AdditionalLibraryDirectories>
