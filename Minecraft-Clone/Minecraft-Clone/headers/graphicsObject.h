@@ -22,6 +22,8 @@ public:
 	glm::vec2* texture_array;
 	GLuint ctm_location;
 	glm::mat4 ctm = { { 1.0, 0.0, 0.0, 0.0 },{ 0.0, 1.0, 0.0, 0.0 },{ 0.0, 0.0, 1.0, 0.0 },{ 0.0, 0.0, 0.0, 1.0 } };
+	GLuint selected_location;
+	int selected = 1;
 private:
 
 };

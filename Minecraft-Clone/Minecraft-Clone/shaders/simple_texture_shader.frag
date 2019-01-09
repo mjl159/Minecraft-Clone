@@ -2,9 +2,15 @@
 
 in vec2 texCoords;
 
+uniform int selected;
 uniform sampler2D texture;
 
 void main()
 {
-	gl_FragColor = texture2D(texture, texCoords);
+	if(selected == 1) {
+		gl_FragColor = texture2D(texture, texCoords) + vec4(1.0, 1.0, 1.0, 1.0);
+	}
+	else {
+		gl_FragColor = texture2D(texture, texCoords);
+	}
 }

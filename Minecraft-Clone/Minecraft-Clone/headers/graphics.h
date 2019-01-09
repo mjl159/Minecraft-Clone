@@ -34,9 +34,12 @@ public:
 	void display(void);
 	void idle(void);
 
-	int genCubeTexture(std::string textureKey, glm::vec3 pos);
-	int genBlockSides(std::string textureKey, std::bitset<6> sides, glm::vec3 pos);
-	int genWorld(std::vector<std::vector<std::vector<int>>> world, std::map<int, std::string> blockMap);
+	void genCubeColor(int ID, glm::vec4 color, glm::vec3 pos);
+	void genCubeColorLines(int ID, glm::vec4 color, glm::vec3 pos);
+	void genCubeTexture(int ID, std::string textureKey, glm::vec3 pos);
+	void genBlockSides(int ID, std::string textureKey, std::bitset<6> sides, glm::vec3 pos);
+
+	void genWorld(std::vector<std::vector<std::vector<int>>> world, std::map<int, std::string> blockMap);
 
 	void moveCamera(int action, GLfloat modifier);
 	void look(GLfloat xOffset, GLfloat yOffset);
